@@ -3,12 +3,20 @@
 import React from 'react';
 import Home from './Home';
 import './App.css'; // Import global styles
+import AddBooks from "./AddBooks"
+import  {BrowserRouter,Routes,Route} from "react-router-dom"
 
 function App() {
   return (
     <div className="App">
-      <Home />
-    </div>
+    <BrowserRouter>
+       <Routes>
+           <Route path="/" element={ <Home/>}/>
+           <Route path="/addbook" element={<AddBooks/>}/>
+       </Routes>
+    </BrowserRouter>
+   
+  </div>
   );
 }
 
